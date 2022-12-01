@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-void Diccionario(char*nombrearch,char palabra[])
+void Diccionario(char* nombrearch,char palabra[])
 {
 	strcpy(palabra[0], "Diccionario");
 	int elementos = 1;
@@ -13,13 +13,25 @@ void Diccionario(char*nombrearch,char palabra[])
 	fopen_s(&archivo, nombrearch,"r");
 	if (archivo != NULL)
 	{
-		scanf("%[^\n]", &palabra);
-		fflush(stdin);
-		for (in i = 0; palabra[i] != '\0'; i++)
+		char texto[700];
+
+		while (!feof(archivo))
 		{
-			palabra[i] = tolower(palabra[i]);
+			for (int i = 0; i != elementos; i++)
+			{
+				fscanf(archivo, "%s", texto[i]);
+			}
+			fclose(archivo);
 		}
-		printf("%s", palabra);
+		int caracternombrearch, numpalabra = 0, j = 0;
+		char palabrasinorden[]{ 'hola','pepe','C' };
+		char arrayAxiliar[];
+		struct PALABRA_CON_FREC
+		{
+			char laPalabra[];
+			int frecuencia = 1;
+		}
+		unaPalabra;
 	}
 	else
 	{
