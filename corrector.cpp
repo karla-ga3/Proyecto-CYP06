@@ -3,12 +3,14 @@
 #include <string.h>
 #include <ctype.h>
 
-void Diccionario()
+void Diccionario(char*nombrearch,char palabra[])
 {
-	FILE* archivo;
-		char palabra;
+	strcpy(palabra[0], "Diccionario");
+	int elementos = 1;
 
-	fopen_s(&archivo, ".txt", "w");
+	FILE* archivo;
+
+	fopen_s(&archivo, nombrearch,"r");
 	if (archivo != NULL)
 	{
 		scanf("%[^\n]", &palabra);
