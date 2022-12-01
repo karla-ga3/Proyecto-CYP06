@@ -32,6 +32,20 @@ void Diccionario(char* nombrearch,char palabra[])
 			int frecuencia = 1;
 		}
 		unaPalabra;
+		while (nombrearch[caracternombrearch] != '\0')
+		{
+			caracternombrearch = 0;
+			while (caracternombrearch != ' ' && caracternombrearch != '\0' && caracternombrearch != '	' && caracternombrearch != ',' && caracternombrearch != '.' && caracternombrearch != '(' && caracternombrearch != ')' && caracternombrearch != '¿' && caracternombrearch != '?' && caracternombrearch != '!' && caracternombrearch != '¡')
+			{
+				palabrasinorden[numpalabra][caracternombrearch++] = nombrearch[caracternombrearch];
+			}
+			caracternombrearch = '\0';
+			numpalabra++;
+			if (nombrearch[caracternombrearch] != '\0')
+			{
+				caracternombrearch++;
+			}
+		}
 	}
 	else
 	{
