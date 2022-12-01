@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 
 void Diccionario(char* nombrearch,char palabra[])
 {
@@ -24,11 +23,11 @@ void Diccionario(char* nombrearch,char palabra[])
 			fclose(archivo);
 		}
 		int caracternombrearch, numpalabra = 0, j = 0;
-		char palabrasinorden[]{ 'hola','pepe','C' };
+		char palabrasinorden[]{ 'hola','papa','h' };
 		char arrayAxiliar[];
 		struct PALABRA_CON_FREC
 		{
-			char laPalabra[];
+			char unaPalabra[];
 			int frecuencia = 1;
 		}
 		unaPalabra;
@@ -65,8 +64,4 @@ void Diccionario(char* nombrearch,char palabra[])
 		}
 
 	}
-}
-int main()
-{
-	return 0;
 }
