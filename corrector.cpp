@@ -46,7 +46,26 @@ void Diccionario(char* nombrearch,char palabra[])
 				caracternombrearch++;
 			}
 		}
+		for (int i = 0; i < caracternombrearch; i++)
+		{
+			for (int posicionDelantera = 1; posicionDelantera < caracternombrearch; posicionDelantera++)
+			{
+				if (strcmp(palabrasinorden[i], palabrasinorden[posicionDelantera]) == 0)
+				{
+					palabrasinorden[posicionDelantera][0] = '\0';
+					unaPalabra.frecuencia++;
+				}
+				else if (strcmp(palabrasinorden[i], palabrasinorden[posicionDelantera]) > 0)
+				{
+					strcpy(arrayAxiliar, palabrasinorden[i]);
+					strcpy(palabrasinorden[i], palabrasinorden[posicionDelantera]);
+					strcpy(palabrasinorden[posicionDelantera], arrayAxiliar);
+				}
+			}
+		}
+
 	}
+}
 	else
 	{
 		printf("\n No detecta archivo \n\n");
