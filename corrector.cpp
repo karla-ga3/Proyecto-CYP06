@@ -66,12 +66,6 @@ void Diccionario(char* nombrearch,char palabra[])
 
 	}
 }
-	else
-	{
-		printf("\n No detecta archivo \n\n");
-	}
-	fclose(archivo);
-}
 int main()
 {
 	return 0;
